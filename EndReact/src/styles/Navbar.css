@@ -1,0 +1,20 @@
+.navegar{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+    background-color: #294954;
+    position: relative;
+    bottom: 10px;
+    right: 6px;
+    inline-size: 1363px;
+    justify-content: end;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+.linkProtegido{
+    text-decoration: none;
+    margin-top: 11px;
+}
