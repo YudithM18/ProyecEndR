@@ -11,6 +11,8 @@ function FormAcercaNS() {
                supervisar el mantenimiento y brindar atención. 
                </p>
 
+               <br />
+
                <h1 className='tituloPreg'>Nuestra Historia</h1>
                <p className='texto'>El comentario recurrente acerca de que existen compañías que brindan servicios <br />
                 similares, pero con una calidad inferior o a precios desproporcionados, ha revelado <br />
@@ -20,6 +22,8 @@ function FormAcercaNS() {
                 la manera más eficiente posible.
                 </p>
 
+                <br />
+
                 <h1 className='tituloPreg'>Misión</h1>
                 <p className='texto'>Nosara House Management se dedica a ofrecer un servicio integral y de alta  calidad <br />
                 en la administracion y mantenimiento de propiedades en la región costera de Nosara. <br />
@@ -28,6 +32,16 @@ function FormAcercaNS() {
                 atencion al detalle y profesionalismo. Nuestro objetivo es garantizar la tranquilidad y  <br />
                 satisfacción de los propietarios, asegurando que sus propiedades esten en óptimas <br />
                 condiciones en todo momento.
+                </p>
+
+                <br />
+
+                <h1 className='tituloPreg'>Visión</h1>
+                <p className='texto'>Ser una empresa lider en la administracion y mantenimiento de propiedades en <br />
+                Nosara, reconocida por nuestra fiabilidad, atencion personalizada y compromiso con la excelencia. <br />
+                Aspiramos a ser los socios de confianza para los propietarios, contribuyendo a mejorar el valor y <br />
+                el disfrute de sus inmuebles, mientras promovemos prácticas sostenibles y responsables que respeten <br />
+                el entorno natural de la región.
                 </p>
 
 

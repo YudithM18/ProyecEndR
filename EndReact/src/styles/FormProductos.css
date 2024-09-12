@@ -1,0 +1,18 @@
+.imagen{
+    width: 450px;
+    height: 550px;
+    background-color: rgba(255, 255, 255, 0.795);
+    padding: 20px;
+    box-shadow: 7px 13px 38px #1F3D47;
+}
+
+.subtitul{
+    margin-left: 40px;
+}
+
+.TablaProdc{
+    display: grid;
+    grid-template-columns: 100px ;
+    grid-template-rows: 600px 600px 600px 600px 600px ;
+    margin-left: 420px;
+}

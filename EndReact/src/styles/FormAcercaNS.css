@@ -1,7 +1,10 @@
 .tituloPreg{
-    margin-left: 280px;
+    margin-left: 210px;
+    font-size: xx-large;
+    color: rgb(168, 168, 168);
 }
 
 .texto{
-    margin-left: 330px;
+    margin-left: 290px;
+    font-size: 20px;
 }

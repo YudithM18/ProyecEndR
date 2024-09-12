@@ -1,0 +1,64 @@
+.servicio{
+    margin-left: 330px;
+    font-size: xxx-large;
+}
+
+.contenedorJardin{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 400px 400px 400px 400px;
+}
+
+.jardin{
+    width: 450px;
+    height: 350px;
+    margin-left: 180px;
+    background-color: #162f38;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
+}
+
+.contenedorCanoas{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 400px ;
+}
+
+.canoa{
+    width: 450px;
+    height: 350px;
+    margin-left: 180px;
+    background-color: #162f38;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
+}
+
+
+.canoa1{
+    width: 450px;
+    height: 350px;
+    margin-left: 440px;
+    background-color: #162f38;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
+}
+
+
+.contenedorPiscina{
+    display: grid;
+    grid-template-columns: 500px 500px;
+}
+
+
+.piscina{
+    width: 450px;
+    height: 550px;
+    margin-left: 180px;
+    background-color: #1F3D47;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692); 
+}
