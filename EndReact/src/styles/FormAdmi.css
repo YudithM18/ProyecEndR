@@ -1,0 +1,62 @@
+.contenedorAP{
+    text-align: center;
+    width: 500px;
+    padding: 30px;
+    background-color: rgba(19, 69, 87, 0.733);
+    box-shadow: 7px 13px 38px black;
+    margin-left: 400px;
+}
+
+
+
+.titulo{
+    margin-left: 30px;
+}
+
+
+
+.identificar{
+    font-size: large;
+}
+
+
+.contenedorAS{
+    text-align: center;
+    width: 500px;
+    padding: 30px;
+    background-color: rgba(4, 32, 43, 0.733);
+    box-shadow: 7px 13px 38px black;
+    margin-left: 400px; 
+}
+
+
+.contenedorAT{
+    text-align: center;
+    width: 500px;
+    padding: 30px;
+    background-color: rgba(23, 53, 65, 0.733);
+    box-shadow: 7px 13px 38px black;
+    margin-left: 400px; 
+}
+
+
+.boton{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    background-color: rgba(57, 63, 70, 0.507);
+    color: antiquewhite;
+}
+
+
+
+.historial{
+    margin-left: 100px;
+    font-size: xxx-large;
+}
+
+
+.imgRecid{
+    width: 200px;
+    height: 200px;
+}

@@ -1,5 +1,9 @@
 .mapa{
-    background-color: antiquewhite;
+    background-color: rgb(87, 85, 82);
     padding: 30px;
     box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
+}
+
+.tituloU{
+    font-size: xxx-large;
 }

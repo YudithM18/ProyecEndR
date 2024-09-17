@@ -1,7 +1,7 @@
-async function PostServicios(imagen) {
-
+async function PostServicios(servicio, precioS) {
     const datoS ={
-        imagen
+        servicio,
+        precioS
     }
     try {
         // Realiza una solicitud POST a la URL especificada

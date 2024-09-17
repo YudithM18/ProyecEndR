@@ -1,0 +1,25 @@
+.ContenedorF{
+    background-color: rgba(54, 52, 52, 0.705);
+    position: relative;
+    top: 10px;
+    right: 6px;
+    inline-size: 1353px;
+    justify-content: end;
+}
+
+
+.TituloF{
+    margin-left: 100px;
+    margin-top: 90px;
+    color: rgb(190, 190, 190);
+}
+
+.Horario{
+    color: rgba(161, 161, 161, 0.76);
+}
+
+.distribuidor{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    justify-content: space-evenly;
+}

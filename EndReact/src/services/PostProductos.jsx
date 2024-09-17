@@ -1,11 +1,13 @@
-async function PostProducto(imagen) {
+async function PostProducto(imagen, precioP, descripcion) {
 
     const datos ={
-        imagen
+        imagen,
+        precioP,
+        descripcion
     }
     try {
         // Realiza una solicitud POST a la URL especificada
-        const response = await fetch('http://localhost:3001/producto', {
+        const response = await fetch('http://localhost:3001/producto/', {
             method: 'POST', // Especifica que se está utilizando el método POST
             headers: {
                 'Content-Type': 'application/json' // Indica que los datos se envían en formato JSON

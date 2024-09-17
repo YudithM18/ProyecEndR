@@ -1,25 +1,67 @@
-import React from 'react'
-import Prod1 from '../img/producto1.jpg'
-import Prod2 from '../img/producto2.jpg'
-import Prod3 from '../img/producto3.jpg'
-import Prod4 from '../img/producto4.jpg'
-import Prod5 from '../img/producto5.jpg'
+import React, { useState, useEffect } from 'react'
+import getServicios from '../services/GetServicios'
+import getProductos from '../services/GetProductos'
 import '../styles/FormProductos.css'
 
 function FormProductos() {
+
+  const [datosProductos, setProductos] = useState([]);
+  const [datoServicios, setServicios] = useState([]);
+  
+
+
+  useEffect(() => {
+    const fetchProductos = async () => {
+      const data = await getProductos();
+     
+      
+      setProductos(data);
+ 
+    };
+    fetchProductos();
+  }, []);
+
+
+
+  useEffect(() => {
+    const fetchServicios= async () => {
+      const dato = await getServicios();
+     
+      
+      setServicios(dato);
+ 
+    };
+    fetchServicios();
+  }, []);
+
+
+  
+
+  
   return (
     <div>  
-        <h1 className='subtitul'> ESTOS SON ALGUNOS DE LOS PRODUCTOS QUE UTILIZAMOS PARA DESEMPEÑAR DE LA MEJOR MANERA 
-        Y DE FORMA RESPONSABLE CON EL MEDIO AMBIENTE</h1>
-    <br />
-    <br />
-         
+
+         <h1 className='tituloProduct'>Productos Disponibles</h1>
+
         <div className='TablaProdc'>
-            <img src={Prod1} className='imagen' />
-            <img src={Prod2} className='imagen' />
-            <img src={Prod3} className='imagen' />
-            <img src={Prod4} className='imagen' />
-            <img src={Prod5} className='imagen' />
+        <ul>
+          {datosProductos.map((productos) => (
+            <li key={productos.id}>
+              <br />
+              <img className='imagen' src={productos.imagen}  /> <br />
+              {productos.precioP} <br /> {productos.descripcion}</li>
+          ))}
+        </ul>
+        </div>
+
+          <h1 className='tituloServs'>Servicios Disponibles</h1>
+
+        <div>
+        <ul>
+          {datoServicios.map((servicio) => (
+            <li className='texto' key={servicio.id}>{servicio.servicio} <br /> {servicio.precioS}</li>
+          ))}
+        </ul>
         </div>
     </div>
   )

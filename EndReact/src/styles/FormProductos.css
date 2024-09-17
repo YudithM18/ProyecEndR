@@ -6,13 +6,21 @@
     box-shadow: 7px 13px 38px #1F3D47;
 }
 
-.subtitul{
-    margin-left: 40px;
+.TablaProdc{
+    display: flex;
+    margin-left: 420px;
 }
 
-.TablaProdc{
-    display: grid;
-    grid-template-columns: 100px ;
-    grid-template-rows: 600px 600px 600px 600px 600px ;
-    margin-left: 420px;
+.tituloProduct{
+    margin-left: 40px;
+    font-size: xxx-large;
+}
+
+.tituloServs{
+    margin-left: 40px;
+    font-size: xxx-large;
+}
+
+.texto{
+    font-size: x-large
 }

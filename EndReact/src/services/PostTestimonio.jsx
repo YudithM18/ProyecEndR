@@ -1,16 +1,17 @@
-async function PostProducto(imagen) {
-
-    const datos ={
-        imagen
+async function PostTestimonio(persona, fecha, testimonio) {
+    const datoR ={
+        persona, 
+        fecha, 
+        testimonio
     }
     try {
         // Realiza una solicitud POST a la URL especificada
-        const response = await fetch('http://localhost:3001/producto', {
+        const response = await fetch('http://localhost:3001/testimonios/', {
             method: 'POST', // Especifica que se está utilizando el método POST
             headers: {
                 'Content-Type': 'application/json' // Indica que los datos se envían en formato JSON
             },
-            body: JSON.stringify(datos) // Convierte el objeto newUser a JSON para enviarlo en el cuerpo de la solicitud
+            body: JSON.stringify(datoR) // Convierte el objeto newUser a JSON para enviarlo en el cuerpo de la solicitud
         });
 
         // Espera la respuesta en formato JSON
@@ -23,4 +24,4 @@ async function PostProducto(imagen) {
         console.error(error);
     }
 }
-export default PostProducto ;
+export default PostTestimonio ;

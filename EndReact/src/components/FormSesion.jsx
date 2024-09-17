@@ -57,19 +57,23 @@ function FormSesion() {
 
   return (
     <div>
+      <br />
+      <br />
+      <br />
+
         <div className='contenedorS'>
             <h1 className='tituloS'>Inicio Sesión</h1>
 
-            <p>Usuario</p>
+            <p className='ingreso'>Usuario</p>
             <input type="text" value={users} onChange={cargausers} />
 
-            <p>Contraseña</p>
+            <p className='ingreso'>Contraseña</p>
             <input type="text" value={password} onChange={cargaContra} />
 
             <br />
             <br />
 
-            <button onClick={cargar}>Ingresar</button>
+            <button className='botonS' onClick={cargar}>Ingresar</button>
             <p>{saludo}</p>
             
         </div>

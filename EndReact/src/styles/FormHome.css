@@ -3,3 +3,20 @@
     margin-left: 440px;
     margin-top: 100px;
 }
+
+
+.tituloTest{
+    margin-left: 100px;
+    font-size: xxx-large;
+}
+
+
+.contenedorTest{
+    background-color: #3f4a4ebe;
+    position: relative;
+    top: 25px;
+    right: 6px;
+    inline-size: 1353px;
+    justify-content: end;
+    font-size: x-large;
+}

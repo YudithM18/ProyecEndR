@@ -1,0 +1,26 @@
+.contenedorS{
+    text-align: center;
+    width: 400px;
+    padding: 30px;
+    background-color: rgba(19, 69, 87, 0.733);
+    box-shadow: 7px 13px 38px black;
+    margin-left: 450px;
+}
+
+
+.tituloS{
+    margin-left: 30px;
+    font-size: xxx-large;
+}
+
+
+.ingreso{
+    font-size: large;
+}
+
+.botonS{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    background-color: #73858dbe;
+}
