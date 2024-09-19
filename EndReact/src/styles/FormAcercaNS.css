@@ -1,10 +1,36 @@
-.tituloPreg{
-    margin-left: 210px;
-    font-size: xx-large;
+.tituloPreg {
+    margin-left: 210px; /* Margen izquierdo para pantallas grandes */
+    font-size: xx-large; /* Tamaño de fuente para pantallas grandes */
     color: rgb(168, 168, 168);
 }
 
-.texto{
-    margin-left: 290px;
-    font-size: 20px;
+.texto {
+    margin-left: 290px; /* Margen izquierdo para pantallas grandes */
+    font-size: 20px; /* Tamaño de fuente para pantallas grandes */
+}
+
+/* Media Queries para celular */
+@media (max-width: 768px) {
+    .tituloPreg {
+        margin-left: 20px; /* Reduce el margen izquierdo */
+        font-size: x-large; /* Ajusta el tamaño de fuente */
+        text-align: center; /* Centra el título */
+    }
+
+    .texto {
+        margin-left: 20px; /* Reduce el margen izquierdo */
+        font-size: 18px; /* Ajusta el tamaño de fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    .tituloPreg {
+        margin-left: 10px; /* Reduce aún más el margen izquierdo */
+        font-size: large; /* Ajusta el tamaño de fuente */
+    }
+
+    .texto {
+        margin-left: 10px; /* Reduce el margen izquierdo */
+        font-size: 16px; /* Ajusta el tamaño de fuente */
+    }
 }

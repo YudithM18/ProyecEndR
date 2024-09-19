@@ -39,6 +39,10 @@ function FormSesion() {
     setPassword(event.target.value);
   };
 
+  const cargaRegreso = () =>{
+    navigate("/"); 
+  }
+
   const cargar = () => {
 
   
@@ -57,6 +61,8 @@ function FormSesion() {
 
   return (
     <div>
+
+      <button className='botonOmitir' onClick={cargaRegreso}>Omitir</button>
       <br />
       <br />
       <br />
@@ -65,10 +71,10 @@ function FormSesion() {
             <h1 className='tituloS'>Inicio Sesión</h1>
 
             <p className='ingreso'>Usuario</p>
-            <input type="text" value={users} onChange={cargausers} />
+            <input className='inputSesion' type="text" value={users} onChange={cargausers} />
 
             <p className='ingreso'>Contraseña</p>
-            <input type="text" value={password} onChange={cargaContra} />
+            <input className='inputSesion' type="text" value={password} onChange={cargaContra} />
 
             <br />
             <br />

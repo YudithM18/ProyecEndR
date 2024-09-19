@@ -12,7 +12,8 @@ function Navbar() {
             <Link to= "/Contacto" className='link'>Contacto/ <br /> Contacts</Link>
             <Link to= "/Ubicacion" className='link'>Ubicación/ <br /> Location</Link>
             <Link to= "/AsiSomos" className='link'>Así Somos/ <br /> About Us</Link>
-            <Link to= "/Administracion" className='linkProtegido'>⚙️</Link>
+            <Link to= "/Administracion" className='linkProtegido'>Gerencia</Link>
+            <Link to= "/AdministracionUsers" className='linkProtegido'>Usuarios</Link>
         </div>
     </div>
   )

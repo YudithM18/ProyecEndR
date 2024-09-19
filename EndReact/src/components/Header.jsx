@@ -7,7 +7,7 @@ function Header() {
     <div>
        <div className='header'>
         <img className='logo' src={logo} alt="Nosara House Management" />
-        <h1>NOSARA HOUSE MANAGEMENT</h1>
+        <h1 className='tituloH'>NOSARA HOUSE MANAGEMENT</h1>
        </div>
     </div>
   )

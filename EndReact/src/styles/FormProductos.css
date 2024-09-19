@@ -1,26 +1,55 @@
-.imagen{
-    width: 450px;
-    height: 550px;
+.imagen {
+    width: 450px; /* Ancho para pantallas grandes */
+    height: 550px; /* Altura para pantallas grandes */
     background-color: rgba(255, 255, 255, 0.795);
     padding: 20px;
     box-shadow: 7px 13px 38px #1F3D47;
 }
 
-.TablaProdc{
-    display: flex;
-    margin-left: 420px;
+.TablaProdc {
+    display: flex; /* Estilo de flexbox para tabla de productos */
+    margin-left: 420px; /* Margen izquierdo para pantallas grandes */
 }
 
-.tituloProduct{
-    margin-left: 40px;
-    font-size: xxx-large;
+.tituloProduct,
+.tituloServs {
+    margin-left: 40px; /* Margen izquierdo para títulos */
+    font-size: xxx-large; /* Tamaño de fuente para títulos */
 }
 
-.tituloServs{
-    margin-left: 40px;
-    font-size: xxx-large;
+.texto {
+    font-size: x-large; /* Tamaño de fuente para texto */
 }
 
-.texto{
-    font-size: x-large
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .imagen {
+        width: 90%; /* Ancho adaptado para pantallas pequeñas */
+        height: auto; /* Altura automática para mejor ajuste */
+        margin: 0 auto; /* Centra la imagen */
+    }
+
+    .TablaProdc {
+        flex-direction: column; /* Cambia a columna para mejor visualización */
+        margin-left: 0; /* Elimina el margen izquierdo en móviles */
+        align-items: center; /* Centra los elementos dentro del flexbox */
+    }
+
+    .tituloProduct,
+    .tituloServs {
+        margin-left: 0; /* Elimina el margen izquierdo en móviles */
+        text-align: center; /* Centra los títulos */
+        font-size: x-large; /* Reduce el tamaño de fuente para móviles */
+    }
+
+    .texto {
+        font-size: large; /* Reduce el tamaño de fuente para texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .tituloProduct,
+    .tituloServs {
+        font-size: large; /* Reduce aún más el tamaño de fuente para móviles */
+    }
 }

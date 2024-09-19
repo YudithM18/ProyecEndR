@@ -1,9 +1,37 @@
-.mapa{
+.mapa {
     background-color: rgb(87, 85, 82);
-    padding: 30px;
+    padding: 30px; /* Padding para pantallas grandes */
     box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
+    width: 100%; /* Ancho completo para que se ajuste al contenedor */
+    max-width: 1200px; /* Máximo ancho para pantallas grandes */
+    margin: 0 auto; /* Centra el mapa en el contenedor */
 }
 
-.tituloU{
-    font-size: xxx-large;
+.tituloU {
+    font-size: xxx-large; /* Tamaño de fuente para pantallas grandes */
+}
+
+/* Media Queries para celular */
+@media (max-width: 768px) {
+    .mapa {
+        padding: 20px; /* Reduce el padding para tabletas */
+        width: 90%; /* Ajusta el ancho a 90% para tabletas */
+    }
+
+    .tituloU {
+        font-size: xx-large; /* Ajusta el tamaño de fuente */
+        text-align: center; /* Centra el título */
+    }
+}
+
+@media (max-width: 480px) {
+    .mapa {
+        padding: 15px; /* Reduce aún más el padding para móviles */
+        width: 95%; /* Ajusta el ancho a 95% para móviles */
+    }
+
+    .tituloU {
+        font-size: x-large; /* Ajusta el tamaño de fuente */
+        text-align: center; /* Mantiene el título centrado */
+    }
 }

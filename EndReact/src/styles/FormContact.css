@@ -1,27 +1,26 @@
-.contenedorGmail{
-    margin-left: 450px;
+.contenedorGmail {
+    margin-left: 450px; /* Margen izquierdo para pantallas grandes */
     margin-top: 100px;
 }
 
-
-form{
+form {
     background-color: #162f38;
     padding: 20px;
-    box-shadow:7px 13px 38px rgba(70, 70, 70, 0.692);
-    max-width: 400px;
-    width: 100%;
+    box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
+    max-width: 400px; /* Ancho máximo del formulario */
+    width: 100%; /* Ancho completo */
 }
 
-label{
+label {
     display: block;
     font-weight: bold;
     color: white;
 }
 
-input[type="text"],
+.textuser,
 input[type="email"],
-textarea{
-    width: 100%;
+textarea {
+    width: 100%; /* Ancho completo */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -30,27 +29,56 @@ textarea{
     background-color: #98a6acbe;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     color: rgb(255, 253, 253);
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;  
+    font-size: 16px;
+    background-color: dodgerblue; /* Color de fondo del botón */
 }
 
-input[type="submit"]{
-    background-color: dodgerblue;
-
+.tituloC {
+    margin-left: 100px; /* Margen izquierdo para el título */
 }
 
-
-.tituloC{
-    margin-left: 100px;
-}
-
-
-.footer{
+.footer {
     font-size: x-large;
-    margin-left: 600px;
+    margin-left: 600px; /* Margen izquierdo para el footer */
+}
+
+/* Media Queries para celular */
+@media (max-width: 768px) {
+    .contenedorGmail {
+        margin-left: 20px; /* Reduce el margen izquierdo */
+        margin-top: 50px; /* Reduce el margen superior */
+    }
+
+    form {
+        max-width: 90%; /* Ajusta el ancho del formulario */
+        margin: 0 auto; /* Centra el formulario */
+    }
+
+    .tituloC {
+        margin-left: 0; /* Elimina el margen izquierdo */
+        text-align: center; /* Centra el título */
+    }
+
+    .footer {
+        margin-left: 0; /* Elimina el margen izquierdo */
+        text-align: center; /* Centra el texto del footer */
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedorGmail {
+        margin-left: 10px; /* Reduce aún más el margen izquierdo */
+        margin-top: 30px; /* Ajusta el margen superior */
+    }
+
+    input[type="submit"] {
+        font-size: 14px; /* Ajusta el tamaño de fuente del botón */
+        padding: 8px 12px; /* Ajusta el padding del botón */
+    }
 }

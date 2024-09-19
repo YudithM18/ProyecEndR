@@ -1,20 +1,41 @@
-.navegar{
+.navegar {
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
-    background-color: #294954;
-    position: relative;
-    bottom: 10px;
-    right: 6px;
-    inline-size: 1353px;
-    justify-content: end;
+    grid-template-columns: repeat(8, 100px); /* Estructura de columnas */
+    background-color: #294954; /* Color de fondo */
+    position: relative; /* Posición relativa */
+    bottom: 10px; /* Desplazamiento hacia abajo */
+    right: 6px; /* Desplazamiento hacia la derecha */
+    inline-size: 1353px; /* Ancho máximo */
+    justify-content: end; /* Alineación a la derecha */
 }
 
-.link{
-    text-decoration: none;
-    color: white;
+.link {
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color del texto */
 }
 
-.linkProtegido{
-    text-decoration: none;
-    margin-top: 11px;
+.linkProtegido {
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color del texto */
+    margin-top: 11px; /* Margen superior */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .navegar {
+        grid-template-columns: repeat(4, 1fr); /* Reduce a 4 columnas en pantallas pequeñas */
+        inline-size: auto; /* Ancho automático */
+        justify-content: center; /* Centra los elementos */
+        padding: 10px; /* Añade padding para mayor espacio */
+    }
+}
+
+@media (max-width: 480px) {
+    .navegar {
+        grid-template-columns: repeat(3, 1fr); /* Reduce a 3 columnas en pantallas aún más pequeñas */
+    }
+
+    .link {
+        font-size: 14px; /* Ajusta el tamaño de la fuente en móviles pequeños */
+    }
 }

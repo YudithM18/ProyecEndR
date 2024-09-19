@@ -1,46 +1,24 @@
-.contenedorAP{
+.contenedorAP, 
+.contenedorAS, 
+.contenedorAT {
     text-align: center;
-    width: 500px;
+    width: 500px; /* Ancho para pantallas grandes */
     padding: 30px;
     background-color: rgba(19, 69, 87, 0.733);
     box-shadow: 7px 13px 38px black;
-    margin-left: 400px;
+    margin-left: 400px; /* Margen para pantallas grandes */
 }
 
-
-
-.titulo{
+/* Títulos y textos */
+.titulo {
     margin-left: 30px;
 }
 
-
-
-.identificar{
+.identificar {
     font-size: large;
 }
 
-
-.contenedorAS{
-    text-align: center;
-    width: 500px;
-    padding: 30px;
-    background-color: rgba(4, 32, 43, 0.733);
-    box-shadow: 7px 13px 38px black;
-    margin-left: 400px; 
-}
-
-
-.contenedorAT{
-    text-align: center;
-    width: 500px;
-    padding: 30px;
-    background-color: rgba(23, 53, 65, 0.733);
-    box-shadow: 7px 13px 38px black;
-    margin-left: 400px; 
-}
-
-
-.boton{
+.boton {
     width: 100px;
     height: 40px;
     font-size: 15px;
@@ -48,15 +26,70 @@
     color: antiquewhite;
 }
 
-
-
-.historial{
+.historial {
     margin-left: 100px;
     font-size: xxx-large;
 }
 
-
-.imgRecid{
+.imgRecid {
     width: 200px;
     height: 200px;
+}
+
+.editInp {
+    width: 200px;
+    height: 20px;
+    background-color: #98a6acbe;
+    color: beige;
+    border-radius: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #98a6acbe;
+}
+
+
+/* Media Queries para celular */
+@media (max-width: 480px) {
+    .contenedorAP, 
+    .contenedorAS, 
+    .contenedorAT {
+        width: 95%; /* Ancho más ajustado para móviles */
+        margin-left: auto; /* Centra el contenedor */
+        margin-right: auto; /* Centra el contenedor */
+        padding: 15px; /* Reduce el padding */
+    }
+
+    .titulo {
+        margin-left: 0; /* Elimina margen izquierdo */
+        text-align: center; /* Centra el título */
+    }
+
+    .historial {
+        margin-left: 0; /* Elimina margen izquierdo */
+        font-size: xx-large; /* Ajusta el tamaño de fuente */
+        text-align: center; /* Centra el texto */
+    }
+
+    .boton {
+        width: 80px; /* Reduce el ancho del botón */
+        height: 35px; /* Reduce la altura del botón */
+        font-size: 14px; /* Ajusta el tamaño de fuente */
+    }
+
+    .imgRecid {
+        width: 150px; /* Reduce el tamaño de la imagen */
+        height: 150px; /* Reduce el tamaño de la imagen */
+    }
+
+    .editInp,
+    .input {
+        width: 100%; /* Mantiene el ancho completo */
+    }
 }

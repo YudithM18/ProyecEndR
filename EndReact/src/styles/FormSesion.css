@@ -1,4 +1,4 @@
-.contenedorS{
+.contenedorS {
     text-align: center;
     width: 400px;
     padding: 30px;
@@ -7,20 +7,66 @@
     margin-left: 450px;
 }
 
-
-.tituloS{
+.tituloS {
     margin-left: 30px;
     font-size: xxx-large;
 }
 
-
-.ingreso{
+.ingreso {
     font-size: large;
 }
 
-.botonS{
+.botonS {
     width: 100px;
     height: 40px;
     font-size: 15px;
     background-color: #73858dbe;
+}
+
+.botonOmitir {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    background-color: #1F3D47;
+    color: whitesmoke;
+}
+
+.inputSesion {
+    width: 100%; /* Ancho completo */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #98a6acbe;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 600px) {
+    .contenedorS {
+        width: 90%; /* Ajustar el ancho al 90% en dispositivos móviles */
+        margin-left: auto; /* Centrar el contenedor */
+        margin-right: auto; /* Centrar el contenedor */
+        padding: 20px; /* Reducir padding */
+    }
+
+    .tituloS {
+        font-size: xx-large; /* Ajustar el tamaño de la fuente */
+        margin-left: 0; /* Eliminar margen izquierdo */
+    }
+
+    .ingreso {
+        font-size: medium; /* Ajustar el tamaño de la fuente */
+    }
+
+    .botonS, .botonOmitir {
+        width: 90%; /* Botones ocupan el 90% del ancho */
+        height: 35px; /* Reducir altura */
+        font-size: 14px; /* Ajustar tamaño de fuente */
+    }
+
+    .inputSesion {
+        padding: 8px; /* Reducir padding */
+        margin-bottom: 15px; /* Reducir margen inferior */
+    }
 }

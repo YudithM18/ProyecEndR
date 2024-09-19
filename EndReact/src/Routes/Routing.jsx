@@ -10,6 +10,7 @@ import Login from '../pages/Login'
 import Productos from '../pages/Productos'
 import Servicios from '../pages/Servicios'
 import Ubicacion from '../pages/Ubicacion'
+import AdministracionUsers from '../pages/AdministracionUsers';
 
 const Routing = () => {
     return (
@@ -23,6 +24,7 @@ const Routing = () => {
             <Route path='/Ubicacion' element={<Ubicacion />} />
             <Route path='/Login' element={<Login />} />
             <Route path='/Administracion' element={<ProtectedRoute><Administracion /></ProtectedRoute>} />
+            <Route path='/AdministracionUsers' element={<ProtectedRoute><AdministracionUsers /></ProtectedRoute>} />
          </Routes>
       </Router>
     )

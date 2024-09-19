@@ -1,24 +1,49 @@
-.header{
+.header {
     display: grid;
-    grid-template-columns: 50px 1315px;
-    justify-content: start;
-    width: auto;
-    margin: 0;
-    background-color: #1F3D47;
-    position: relative;
-    bottom: 10px;
-    right: 6px;
-    inline-size: 1353px;
+    grid-template-columns: 50px 1315px; /* Estructura de columnas */
+    justify-content: start; /* Alineación a la izquierda */
+    width: auto; /* Ancho automático */
+    margin: 0; /* Sin margen */
+    background-color: #1F3D47; /* Color de fondo */
+    position: relative; /* Posición relativa */
+    bottom: 10px; /* Desplazamiento hacia abajo */
+    right: 6px; /* Desplazamiento hacia la derecha */
+    inline-size: 1353px; /* Ancho máximo */
 }
 
-.logo{
-    width: 150px;
-    height: 150px;
-    margin-left: 20px;
+.logo {
+    width: 150px; /* Ancho del logo */
+    height: 150px; /* Altura del logo */
+    margin-left: 20px; /* Margen izquierdo */
 }
 
+.tituloH {
+    margin-left: 800px; /* Margen izquierdo para el título */
+    font-size: 35px; /* Tamaño de fuente */
+}
 
-h1{
-    margin-left: 800px;
-    font-size: 35px;
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .header {
+        grid-template-columns: 50px 1fr; /* Ajusta la estructura a una sola columna */
+        inline-size: auto; /* Ancho automático */
+    }
+
+    .logo {
+        width: 120px; /* Ajusta el tamaño del logo para pantallas pequeñas */
+        height: 120px; /* Ajusta la altura del logo */
+        margin-left: 10px; /* Reduce el margen izquierdo */
+    }
+
+    .tituloH {
+        margin-left: 0; /* Elimina el margen izquierdo en móviles */
+        text-align: center; /* Centra el título */
+        font-size: 28px; /* Reduce el tamaño de fuente para móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .tituloH {
+        font-size: 24px; /* Reduce aún más el tamaño de fuente para móviles pequeños */
+    }
 }

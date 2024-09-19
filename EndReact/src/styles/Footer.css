@@ -1,25 +1,59 @@
-.ContenedorF{
+.ContenedorF {
     background-color: rgba(54, 52, 52, 0.705);
     position: relative;
     top: 10px;
     right: 6px;
-    inline-size: 1353px;
+    inline-size: 1353px; /* Ancho para pantallas grandes */
     justify-content: end;
+    padding: 20px; /* Añade padding para mejorar la apariencia */
 }
 
-
-.TituloF{
-    margin-left: 100px;
+.TituloF {
+    margin-left: 100px; /* Margen para pantallas grandes */
     margin-top: 90px;
     color: rgb(190, 190, 190);
+    font-size: xx-large; /* Tamaño de fuente para pantallas grandes */
 }
 
-.Horario{
+.Horario {
     color: rgba(161, 161, 161, 0.76);
 }
 
-.distribuidor{
+.distribuidor {
     display: grid;
-    grid-template-columns: 500px 500px;
+    grid-template-columns: 500px 500px; /* Dos columnas para pantallas grandes */
     justify-content: space-evenly;
+}
+
+/* Media Queries para celular */
+@media (max-width: 768px) {
+    .ContenedorF {
+        inline-size: 90%; /* Ajusta el ancho para tabletas */
+        margin: 0 auto; /* Centra el contenedor */
+    }
+
+    .TituloF {
+        margin-left: 20px; /* Reduce el margen izquierdo */
+        font-size: x-large; /* Ajusta el tamaño de fuente */
+        text-align: center; /* Centra el título */
+    }
+
+    .distribuidor {
+        grid-template-columns: 1fr; /* Una columna para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .ContenedorF {
+        padding: 15px; /* Reduce el padding para móviles */
+    }
+
+    .TituloF {
+        margin-left: 10px; /* Reduce el margen izquierdo */
+        font-size: large; /* Ajusta el tamaño de fuente */
+    }
+
+    .Horario {
+        font-size: small; /* Ajusta el tamaño de fuente para el horario */
+    }
 }

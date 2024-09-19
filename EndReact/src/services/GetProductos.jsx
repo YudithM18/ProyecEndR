@@ -8,13 +8,13 @@ async function getProductos() {
         });
 
         if (!response.ok) {
-            throw new Error('Error fetching users');
+            throw new Error('Error fetching products');
         }
 
         const users = await response.json();
         return users;
     } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error('Error fetching products:', error);
         throw error;
     }
 }

@@ -1,64 +1,102 @@
-.servicio{
-    margin-left: 330px;
-    font-size: xxx-large;
+.servicio {
+    margin-left: 330px; /* Margen izquierdo para pantallas grandes */
+    font-size: xxx-large; /* Tamaño de fuente para pantallas grandes */
 }
 
-.contenedorJardin{
+.contenedorJardin {
     display: grid;
-    grid-template-columns: 500px 500px;
+    grid-template-columns: 500px 500px; /* Dos columnas para pantallas grandes */
     grid-template-rows: 400px 400px 400px 400px;
 }
 
-.jardin{
-    width: 450px;
-    height: 350px;
-    margin-left: 180px;
+.jardin {
+    width: 450px; /* Ancho para pantallas grandes */
+    height: 350px; /* Altura para jardín */
+    margin-left: 180px; /* Margen izquierdo para centrar */
     background-color: #162f38;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
 }
 
-.contenedorCanoas{
+.contenedorCanoas {
     display: grid;
-    grid-template-columns: 500px 500px;
-    grid-template-rows: 400px ;
+    grid-template-columns: 500px 500px; /* Dos columnas para canoas */
+    grid-template-rows: 400px;
 }
 
-.canoa{
-    width: 450px;
-    height: 350px;
-    margin-left: 180px;
+.canoa {
+    width: 450px; /* Ancho para canoas */
+    height: 350px; /* Altura para canoas */
+    margin-left: 180px; /* Margen izquierdo para centrar */
     background-color: #162f38;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
 }
 
-
-.canoa1{
-    width: 450px;
-    height: 350px;
-    margin-left: 440px;
+.canoa1 {
+    width: 450px; /* Ancho para canoa1 */
+    height: 350px; /* Altura para canoa1 */
+    margin-left: 440px; /* Margen izquierdo específico */
     background-color: #162f38;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
 }
 
-
-.contenedorPiscina{
+.contenedorPiscina {
     display: grid;
-    grid-template-columns: 500px 500px;
+    grid-template-columns: 500px 500px; /* Dos columnas para piscinas */
 }
 
-
-.piscina{
-    width: 450px;
-    height: 550px;
-    margin-left: 180px;
+.piscina {
+    width: 450px; /* Ancho para piscina */
+    height: 550px; /* Altura para piscina */
+    margin-left: 180px; /* Margen izquierdo para centrar */
     background-color: #1F3D47;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692); 
+    box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .servicio {
+        margin: 20px auto; /* Centra el texto del servicio */
+        text-align: center; /* Centra el texto */
+        font-size: x-large; /* Reduce el tamaño de fuente */
+    }
+
+    .contenedorJardin,
+    .contenedorCanoas,
+    .contenedorPiscina {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en móviles */
+        margin: 0 auto; /* Centra el contenedor */
+    }
+
+    .jardin,
+    .canoa,
+    .canoa1,
+    .piscina {
+        width: 90%; /* Ancho adaptado para pantallas pequeñas */
+        margin: 10px auto; /* Centra y añade espacio entre elementos */
+    }
+
+    .canoa1 {
+        margin-left: 0; /* Elimina el margen izquierdo en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .servicio {
+        font-size: large; /* Reduce aún más el tamaño de fuente */
+    }
+
+    .jardin,
+    .canoa,
+    .canoa1,
+    .piscina {
+        padding: 15px; /* Reduce el padding para un mejor ajuste */
+    }
 }

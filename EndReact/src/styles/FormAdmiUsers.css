@@ -1,0 +1,55 @@
+.contenedorAU {
+    text-align: center;
+    width: 500px; /* Ancho para pantallas grandes */
+    padding: 30px;
+    background-color: rgba(0, 89, 119, 0.733);
+    box-shadow: 7px 13px 38px black;
+    margin-left: 400px; /* Margen para pantallas grandes */
+}
+
+.botonUser {
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    background-color: rgba(67, 80, 94, 0.507);
+    color: antiquewhite;
+}
+
+.ingresoUser {
+    font-size: large;
+}
+
+.inputUser {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #98a6acbe;
+}
+
+.historiaUser {
+    margin-left: 100px;
+    font-size: xxx-large;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .contenedorAU {
+        width: 90%; /* Ajustar el ancho al 90% de la pantalla */
+        margin-left: 0; /* Eliminar margen izquierdo */
+        padding: 20px; /* Reducir el padding */
+    }
+
+    .historiaUser {
+        margin-left: 0; /* Eliminar margen izquierdo en pantallas pequeñas */
+        font-size: xx-large; /* Ajustar tamaño de fuente */
+    }
+
+    .botonUser {
+        width: 80%; /* Aumentar el ancho del botón para que sea más accesible */
+        height: 50px; /* Aumentar la altura del botón */
+        font-size: 18px; /* Aumentar el tamaño de fuente del botón */
+    }
+}
