@@ -1,14 +1,18 @@
 .mapa {
-    background-color: rgb(87, 85, 82);
+    background-color: #1F3D47; /* Color de fondo utilizando la paleta */
     padding: 30px; /* Padding para pantallas grandes */
-    box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
+    box-shadow: 7px 13px 38px rgba(0, 0, 0, 0.5); /* Sombra más sutil */
     width: 100%; /* Ancho completo para que se ajuste al contenedor */
     max-width: 1200px; /* Máximo ancho para pantallas grandes */
     margin: 0 auto; /* Centra el mapa en el contenedor */
+    border-radius: 8px; /* Bordes redondeados */
 }
 
 .tituloU {
     font-size: xxx-large; /* Tamaño de fuente para pantallas grandes */
+    color: #d5dbdd; /* Color claro para el texto */
+    text-align: center; /* Centra el título */
+    margin-bottom: 20px; /* Espacio inferior */
 }
 
 /* Media Queries para celular */

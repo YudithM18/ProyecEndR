@@ -29,11 +29,6 @@
     background-color: #98a6acbe;
 }
 
-.historiaUser {
-    margin-left: 100px;
-    font-size: xxx-large;
-}
-
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
     .contenedorAU {
@@ -42,14 +37,85 @@
         padding: 20px; /* Reducir el padding */
     }
 
-    .historiaUser {
-        margin-left: 0; /* Eliminar margen izquierdo en pantallas pequeñas */
-        font-size: xx-large; /* Ajustar tamaño de fuente */
-    }
-
     .botonUser {
         width: 80%; /* Aumentar el ancho del botón para que sea más accesible */
         height: 50px; /* Aumentar la altura del botón */
         font-size: 18px; /* Aumentar el tamaño de fuente del botón */
+    }
+}
+
+
+ /* Estilos solo para la parte donde se muestran los usuarios creados */
+.historiaUser {
+    text-align: center;
+    color: #d5dbdd; /* Título en color azul oscuro */
+    margin-bottom: 20px;
+    font-size: xxx-large;
+}
+
+.estructura {
+    list-style-type: none; /* Eliminar puntos de la lista */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+}
+
+.visualizacion {
+    background-color: #c1c2c4dc; /* Fondo claro para los elementos */
+    border: 1px solid #1F3D47; /* Borde azul oscuro */
+    border-radius: 8px;
+    padding: 15px; /* Espacio interno */
+    margin: 10px 0; /* Espacio entre elementos */
+    transition: transform 0.2s; /* Animación suave */
+}
+
+
+.visualizacion:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el ratón */
+}
+
+.usuari, .correito, .contraseñita {
+    color: #1F3D47; /* Texto en color azul oscuro */
+    margin: 5px 0; /* Espacio entre párrafos */
+    font-family: sans-serif;
+    font-size:large ;
+}
+
+.botonBorrarUsuario {
+    background-color: #d9534f; /* Color de fondo rojo para el botón */
+    color: white; /* Texto blanco */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.botonBorrarUsuario:hover {
+    background-color: #c9302c; /* Tono más oscuro en hover */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .historiaUser {
+        font-size: 1.5em; /* Tamaño de fuente más pequeño en pantallas pequeñas */
+    }
+
+    .visualizacion {
+        padding: 10px; /* Reducir padding en pantallas pequeñas */
+    }
+
+    .botonBorrarUsuario {
+        width: 100%; /* Botón de ancho completo en pantallas pequeñas */
+        padding: 8px; /* Ajustar padding en botones */
+    }
+}
+
+@media (max-width: 480px) {
+    .visualizacion {
+        padding: 8px; /* Aumentar aún más el espacio interno en pantallas muy pequeñas */
+    }
+
+    .botonBorrarUsuario {
+        padding: 6px; /* Ajustar padding de botones */
     }
 }

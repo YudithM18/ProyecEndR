@@ -1,63 +1,62 @@
 import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { Link } from'react-router-dom';
-import '../styles/FormContact.css'
+import emailjs from '@emailjs/browser'; // Importa la biblioteca para enviar correos
+import { Link } from 'react-router-dom'; // Importa el componente Link para la navegación
+import '../styles/FormContact.css'; // Importa los estilos CSS
 
- const FormContact = () => {
-
-  const form = useRef();
-  const [saludo, setSaludo] = useState('');
+const FormContact = () => {
+  const form = useRef(); // Crea una referencia para el formulario
+  const [saludo, setSaludo] = useState(''); // Estado para mensajes de éxito o error
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Previene el comportamiento por defecto del formulario
     
     emailjs
       .sendForm('service_mxn8ufa', 'template_gy4ku5f', form.current, {
-        publicKey: 'oMQJXGUEr5oov2vCV',
+        publicKey: 'oMQJXGUEr5oov2vCV', // Clave pública para EmailJS
       })
       .then(
         () => {
-          console.log('SUCCESS!');
-          setSaludo("Su correo a sido enviado exítosamente")
+          console.log('SUCCESS!'); // Mensaje de éxito en la consola
+          setSaludo("Su correo ha sido enviado exitosamente"); // Mensaje de éxito para el usuario
         },
         (error) => {
-          console.log('FAILED...', error.text);
-          setSaludo("Ha ocurrido un error. Vuelva a intentar o utilize otro medio de comunicación")
+          console.log('FAILED...', error.text); // Mensaje de error en la consola
+          setSaludo("Ha ocurrido un error. Vuelva a intentar o utilice otro medio de comunicación"); // Mensaje de error para el usuario
         },
       );
   };
 
-  return ( 
+  return (
     <div>
       <div className='contenedorGmail'>
         <form ref={form} onSubmit={sendEmail}>
-        <label>Name</label>
-        <input className='textuser' type="text" name="user_name" />
-        <label>Email</label>
-        <input type="email" name="user_email" />
-        <label>Message</label>
-        <textarea name="message" />
-        <input type="submit" value="Send" /> 
-        <p>{saludo}</p>
+          <label>Name</label>
+          <input className='textuser' type="text" name="user_name" required /> {/* Campo para el nombre */}
+          
+          <label>Email</label>
+          <input type="email" name="user_email" required /> {/* Campo para el correo electrónico */}
+          
+          <label>Message</label>
+          <textarea name="message" required /> {/* Campo para el mensaje */}
+          
+          <input type="submit" value="Send" /> {/* Botón para enviar el formulario */}
+          <p>{saludo}</p> {/* Mensaje de éxito o error */}
         </form>
       </div>
-    
 
-    <footer>
-      <div >
-        <h1 className='tituloC'>Otros Medios De Contacto</h1>
-        <div className='footer'>
-    
-          <Link className='link' to="https://www.facebook.com/profile.php?id=61561244475801&mibextid=ZbWKwL">Nuestro Facebook</Link>
-          <p> WhatsApp: (+506) 8940 0850</p>
-          <p>Correo Electronico: nosarahousemanagement@gmail.com</p>
+      <footer>
+        <div>
+          <h1 className='tituloC'>Otros Medios De Contacto</h1>
+          <div className='footer'>
+            {/* Enlaces a otros medios de contacto */}
+            <Link className='link' to="https://www.facebook.com/profile.php?id=61561244475801&mibextid=ZbWKwL">Nuestro Facebook</Link>
+            <p> WhatsApp: (+506) 8940 0850</p>
+            <p>Correo Electrónico: nosarahousemanagement@gmail.com</p>
+          </div>
         </div>
-      </div>
-   </footer>
+      </footer>
     </div>
-
-    
   );
 };
 
-export default FormContact
+export default FormContact;

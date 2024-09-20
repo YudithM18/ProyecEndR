@@ -4,17 +4,18 @@
 }
 
 form {
-    background-color: #162f38;
+    background-color: #1F3D47; /* Color de fondo más oscuro */
     padding: 20px;
-    box-shadow: 7px 13px 38px rgba(70, 70, 70, 0.692);
+    box-shadow: 7px 13px 38px rgba(0, 0, 0, 0.5); /* Sombra más suave */
     max-width: 400px; /* Ancho máximo del formulario */
     width: 100%; /* Ancho completo */
+    border-radius: 8px; /* Bordes redondeados */
 }
 
 label {
     display: block;
     font-weight: bold;
-    color: white;
+    color: white; /* Color blanco para etiquetas */
 }
 
 .textuser,
@@ -23,29 +24,37 @@ textarea {
     width: 100%; /* Ancho completo */
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Borde claro */
     border-radius: 4px;
     box-sizing: border-box;
-    background-color: #98a6acbe;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo más claro */
+    color: white; /* Texto blanco */
 }
 
 input[type="submit"] {
-    color: rgb(255, 253, 253);
+    color: white; /* Texto blanco */
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    background-color: dodgerblue; /* Color de fondo del botón */
+    background-color: #d9534f; /* Color de fondo rojo para el botón */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+input[type="submit"]:hover {
+    background-color: #c9302c; /* Color más oscuro al pasar el mouse */
 }
 
 .tituloC {
     margin-left: 100px; /* Margen izquierdo para el título */
+    color: white; /* Color blanco para el título */
 }
 
 .footer {
     font-size: x-large;
     margin-left: 600px; /* Margen izquierdo para el footer */
+    color: white; /* Color blanco para el footer */
 }
 
 /* Media Queries para celular */

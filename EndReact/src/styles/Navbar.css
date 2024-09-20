@@ -1,32 +1,54 @@
 .navegar {
     display: grid;
-    grid-template-columns: repeat(8, 100px); /* Estructura de columnas */
-    background-color: #294954; /* Color de fondo */
+    grid-template-columns: repeat(8, 150px); /* Estructura de columnas */
+    background-color: #1F3D47; /* Color de fondo principal */
     position: relative; /* Posición relativa */
-    bottom: 10px; /* Desplazamiento hacia abajo */
-    right: 6px; /* Desplazamiento hacia la derecha */
-    inline-size: 1353px; /* Ancho máximo */
-    justify-content: end; /* Alineación a la derecha */
+    margin: 10px; /* Espaciado externo */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
 }
 
-.link {
+.link, .linkProtegido {
     text-decoration: none; /* Sin subrayado */
-    color: white; /* Color del texto */
+    color: #FFFFFF; /* Color del texto en blanco */
+    font-size: large;
+    font-weight: bold;
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Espacio alrededor del enlace */
+    border-radius: 4px; /* Bordes redondeados en enlaces */
+    transition: background-color 0.3s, transform 0.2s, opacity 0.5s; /* Transiciones suaves */
+    opacity: 0; /* Comienza invisible para la animación */
+    animation: fadeIn 0.5s forwards; /* Animación de entrada */
 }
 
-.linkProtegido {
-    text-decoration: none; /* Sin subrayado */
-    color: white; /* Color del texto */
-    margin-top: 11px; /* Margen superior */
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Desplazamiento hacia arriba */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Vuelve a la posición original */
+    }
 }
 
-/* Media Queries para dispositivos móviles */
+.link:hover, .linkProtegido:hover {
+    background-color: #4B8BA3; /* Fondo al pasar el ratón en teal claro */
+    transform: scale(1.05); /* Aumento sutil */
+}
+
+.linkProtegido:hover {
+    background-color: #050050; /* Color de fondo para enlaces protegidos */
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .navegar {
         grid-template-columns: repeat(4, 1fr); /* Reduce a 4 columnas en pantallas pequeñas */
-        inline-size: auto; /* Ancho automático */
         justify-content: center; /* Centra los elementos */
-        padding: 10px; /* Añade padding para mayor espacio */
+        padding: 20px; /* Añade más padding */
     }
 }
 
@@ -38,4 +60,9 @@
     .link {
         font-size: 14px; /* Ajusta el tamaño de la fuente en móviles pequeños */
     }
+}
+
+/* Elimina el margen final */
+.navegar > *:last-child {
+    margin-right: 0; /* Sin margen derecho para el último elemento */
 }

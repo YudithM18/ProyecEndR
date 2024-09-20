@@ -55,7 +55,7 @@ function FormAdmi() {
     fetchProducto();
   }, []);
   
-  
+    // Funciones para manejar la carga de datos desde los inputs
   const cargaimag = (event) => {
     const img = event.target.files[0];
     const reader = new FileReader();
@@ -122,7 +122,7 @@ function cargaPrecEdit (e){
 
 
 
-///funciones de los botones para agregar, eliminar o editar
+// Funciones para agregar nuevos productos, servicios y testimonios
 
   const cargaNewProduct = async () => {
     if (imagen === '' || precioP === '' || descripcion === '') {
@@ -133,7 +133,6 @@ function cargaPrecEdit (e){
     }
     
   }
-  
 
   const cargaNewServices = () => {
 
@@ -153,7 +152,7 @@ function cargaPrecEdit (e){
     }
    
   }
-
+ // Función para eliminar un producto
    async function cargarDelete(id) {
     await deleteProductos(id)
     const valorEncontrar = datosProducto.filter(datosProducto => datosProducto.id !== id)
@@ -161,10 +160,39 @@ function cargaPrecEdit (e){
    }
 
 
-   function cargaEdicion(id) {  
-    updateProductos(id, imagen,  pricEdit, descripEdit)
-   }
-
+   const cargaEdicion = async (id) => {
+    // Busca el producto original en la lista
+    const productoOriginal = datosProducto.find(producto => producto.id === id);
+  
+    // Si no se encuentra el producto, termina la función
+    if (!productoOriginal) return;
+  
+    // Crea un nuevo objeto con los datos actualizados
+    const nuevosDatos = {
+      imagen: imagen || productoOriginal.imagen,  // Usa la imagen nueva o mantiene la original
+      precioP: pricEdit || productoOriginal.precioP,  // Usa el nuevo precio o mantiene el original
+      descripcion: descripEdit || productoOriginal.descripcion,  // Usa la nueva descripción o mantiene la original
+    };
+  
+    // Llama a la función updateProductos para actualizar el producto en el servidor
+    await updateProductos(id, nuevosDatos.imagen, nuevosDatos.precioP, nuevosDatos.descripcion);
+    
+    // Actualiza la lista de productos en el estado
+    const productosActualizados = datosProducto.map(producto => 
+      producto.id === id ? { ...producto, ...nuevosDatos } : producto
+    );
+  
+    setProducto(productosActualizados);
+    
+    // Resetea los campos de entrada
+    setimagen('');
+    setdescrip('');
+    setprecioP('');
+    setMensaje("Producto actualizado con éxito");
+  };
+  
+ 
+  // Función para cerrar sesión
    const cargaCierre = () =>{
     localStorage.clear();
     navigate("/Login")
@@ -235,17 +263,17 @@ function cargaPrecEdit (e){
         <br />
 
         <h1 className='historial'>Historial</h1>
-        <div>
-        <ul>
+        <div >
+        <ul className='ul'>
           {datosProducto.map((producto) => (
-            <li key={producto.id}>
+            <li className='li' key={producto.id}>
               <br />
               <img className='imgRecid' src={producto.imagen}  /> <input onChange={cargaFotoEdit} type="file"  /> <br />
-              {producto.precioP} <input  className='editInp' type="text" onChange={cargaPrecEdit} /> 
+              {producto.precioP}<input  className='editInp1' type="text" onChange={cargaPrecEdit} /> 
                <br /> {producto.descripcion} <input className='editInp' type="text" onChange={cargaDescripEdit} />
               <br />
-              <button onClick={e=>cargaEdicion(producto.id)}>Guardar</button>
-              <button onClick={e => cargarDelete(producto.id)}>Eliminar</button>
+              <button className='botonHis' onClick={e=>cargaEdicion(producto.id)}>Guardar</button>
+              <button className='botonHis' onClick={e => cargarDelete(producto.id)}>Eliminar</button>
               </li>
           ))}
         </ul>

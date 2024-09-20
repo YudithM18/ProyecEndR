@@ -38,10 +38,10 @@ function FormAcercaNS() {
 
                 <h1 className='tituloPreg'>Visión</h1>
                 <p className='texto'>Ser una empresa lider en la administracion y mantenimiento de propiedades en <br />
-                Nosara, reconocida por nuestra fiabilidad, atencion personalizada y compromiso con la excelencia. <br />
-                Aspiramos a ser los socios de confianza para los propietarios, contribuyendo a mejorar el valor y <br />
-                el disfrute de sus inmuebles, mientras promovemos prácticas sostenibles y responsables que respeten <br />
-                el entorno natural de la región.
+                Nosara, reconocida por nuestra fiabilidad, atencion personalizada y compromiso <br />
+                con la excelencia. Aspiramos a ser los socios de confianza para los propietarios, <br />
+                contribuyendo a mejorar el valor y el disfrute de sus inmuebles, mientras promovemos <br />
+                prácticas sostenibles y responsables que respeten el entorno natural de la región.
                 </p>
 
 

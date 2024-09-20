@@ -1,14 +1,12 @@
 .header {
     display: grid;
-    grid-template-columns: 50px 1315px; /* Estructura de columnas */
+    grid-template-columns: 50px 1fr; /* Estructura de columnas */
     justify-content: start; /* Alineación a la izquierda */
     width: auto; /* Ancho automático */
     margin: 0; /* Sin margen */
     background-color: #1F3D47; /* Color de fondo */
     position: relative; /* Posición relativa */
-    bottom: 10px; /* Desplazamiento hacia abajo */
-    right: 6px; /* Desplazamiento hacia la derecha */
-    inline-size: 1353px; /* Ancho máximo */
+    padding: 10px; /* Espacio interno */
 }
 
 .logo {
@@ -18,15 +16,18 @@
 }
 
 .tituloH {
-    margin-left: 800px; /* Margen izquierdo para el título */
+    margin-left: auto; /* Empuja el título a la derecha */
     font-size: 35px; /* Tamaño de fuente */
+    color: #d5dbdd; /* Color del texto */
+    display: flex; /* Flexbox para centrar verticalmente */
+    align-items: center; /* Centra verticalmente */
 }
 
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
     .header {
         grid-template-columns: 50px 1fr; /* Ajusta la estructura a una sola columna */
-        inline-size: auto; /* Ancho automático */
+        padding: 5px; /* Reduce el padding */
     }
 
     .logo {

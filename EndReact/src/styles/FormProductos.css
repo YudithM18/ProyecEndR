@@ -1,55 +1,106 @@
 .imagen {
-    width: 450px; /* Ancho para pantallas grandes */
-    height: 550px; /* Altura para pantallas grandes */
-    background-color: rgba(255, 255, 255, 0.795);
+    width: 100%; /* Ancho completo para imágenes en su contenedor */
+    max-width: 300px; /* Ancho máximo para imágenes */
+    height: auto; /* Altura automática para mejor ajuste */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
     padding: 20px;
-    box-shadow: 7px 13px 38px #1F3D47;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Sombra más suave */
+    border-radius: 12px; /* Bordes más redondeados */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.imagen:hover {
+    transform: scale(1.05); /* Aumento sutil al pasar el ratón */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
 }
 
 .TablaProdc {
-    display: flex; /* Estilo de flexbox para tabla de productos */
-    margin-left: 420px; /* Margen izquierdo para pantallas grandes */
+    display: flex; /* Usar flexbox para disposición en filas */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
+    justify-content: flex-start; /* Alinea los elementos al inicio */
+    gap: 15px; /* Espacio entre elementos reducido */
+    margin: 20px auto; /* Centra la tabla y ajusta márgenes */
+    padding: 20px; /* Añade padding para mejor separación */
+}
+
+.TablaProdc ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding en la lista */
+    margin: 0; /* Sin margen en la lista */
+    display: flex; /* Usar flexbox en la lista */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+}
+
+.TablaProdc li {
+    flex: 0 0 calc(33.33% - 15px); /* Ancho de cada elemento (3 columnas) */
+    box-sizing: border-box; /* Incluye padding y bordes en el tamaño total */
+    margin-bottom: 15px; /* Espacio entre filas reducido */
+    background-color: rgba(255, 255, 255, 0.774); /* Fondo blanco */
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px; /* Padding interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s; /* Transición suave */
+}
+
+.TablaProdc li:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
 }
 
 .tituloProduct,
 .tituloServs {
-    margin-left: 40px; /* Margen izquierdo para títulos */
-    font-size: xxx-large; /* Tamaño de fuente para títulos */
+    margin: 20px 0; /* Margen vertical para títulos */
+    font-size: 2.5rem; /* Tamaño de fuente más grande y legible */
+    color: #c9c9c9; /* Color de los títulos */
+    text-align: center; /* Centra el texto */
 }
 
 .texto {
-    font-size: x-large; /* Tamaño de fuente para texto */
+    font-size: 1.25rem; /* Tamaño de fuente mejorado para texto */
+    color: rgba(255, 255, 255, 0.9); /* Color de texto más claro */
+    text-align: center; /* Centra el texto */
 }
 
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
+    .TablaProdc li {
+        flex: 0 0 calc(50% - 15px); /* 2 columnas en pantallas medianas */
+        margin-bottom: 15px; /* Ajusta el margen inferior */
+    }
+
     .imagen {
-        width: 90%; /* Ancho adaptado para pantallas pequeñas */
-        height: auto; /* Altura automática para mejor ajuste */
-        margin: 0 auto; /* Centra la imagen */
+        max-width: 90%; /* Ancho adaptado para pantallas pequeñas */
     }
 
     .TablaProdc {
-        flex-direction: column; /* Cambia a columna para mejor visualización */
-        margin-left: 0; /* Elimina el margen izquierdo en móviles */
         align-items: center; /* Centra los elementos dentro del flexbox */
     }
 
     .tituloProduct,
     .tituloServs {
-        margin-left: 0; /* Elimina el margen izquierdo en móviles */
-        text-align: center; /* Centra los títulos */
-        font-size: x-large; /* Reduce el tamaño de fuente para móviles */
+        margin: 10px 0; /* Reduce el margen en móviles */
+        font-size: 2rem; /* Reduce el tamaño de fuente para móviles */
     }
 
     .texto {
-        font-size: large; /* Reduce el tamaño de fuente para texto */
+        font-size: 1rem; /* Reduce el tamaño de fuente para texto */
     }
 }
 
 @media (max-width: 480px) {
+    .TablaProdc li {
+        flex: 0 0 100%; /* 1 columna en pantallas pequeñas */
+        margin-bottom: 15px; /* Ajusta el margen inferior */
+    }
+
     .tituloProduct,
     .tituloServs {
-        font-size: large; /* Reduce aún más el tamaño de fuente para móviles */
+        font-size: 1.5rem; /* Reduce aún más el tamaño de fuente para móviles */
+    }
+
+    .texto {
+        font-size: 0.9rem; /* Ajusta el tamaño de fuente del texto */
     }
 }

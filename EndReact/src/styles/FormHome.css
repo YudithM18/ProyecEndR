@@ -2,21 +2,27 @@
     font-size: 70px; /* Tamaño de fuente para pantallas grandes */
     margin-left: 440px; /* Margen izquierdo para pantallas grandes */
     margin-top: 100px; /* Margen superior */
+    color: #ffffff; /* Color blanco para el texto */
+    text-align: center; /* Centra el texto */
 }
 
 .tituloTest {
     margin-left: 100px; /* Margen izquierdo para títulos de prueba */
     font-size: xxx-large; /* Tamaño de fuente para pantallas grandes */
+    color: #ffffff; /* Color blanco */
 }
 
 .contenedorTest {
-    background-color: #3f4a4ebe; /* Color de fondo */
+    background-color: rgba(31, 61, 71, 0.8); /* Color de fondo con opacidad */
     position: relative; /* Posición relativa */
     top: 25px; /* Desplazamiento hacia abajo */
     right: 6px; /* Desplazamiento hacia la derecha */
     inline-size: 1353px; /* Ancho máximo */
     justify-content: end; /* Alineación de contenido */
     font-size: x-large; /* Tamaño de fuente para el contenedor */
+    padding: 20px; /* Padding para mayor comodidad */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra sutil */
 }
 
 /* Media Queries para dispositivos móviles */
