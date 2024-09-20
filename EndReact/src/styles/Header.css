@@ -21,6 +21,19 @@
     color: #d5dbdd; /* Color del texto */
     display: flex; /* Flexbox para centrar verticalmente */
     align-items: center; /* Centra verticalmente */
+    animation: fadeIn 1s ease-in-out; /* Aplica la animación */
+}
+
+/* Definición de la animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Comienza invisible */
+        transform: translateY(-10px); /* Se mueve un poco hacia arriba */
+    }
+    to {
+        opacity: 1; /* Termina visible */
+        transform: translateY(0); /* Regresa a su posición original */
+    }
 }
 
 /* Media Queries para dispositivos móviles */
