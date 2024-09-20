@@ -1,6 +1,6 @@
 .imagen {
     width: 100%; /* Ancho completo para imágenes en su contenedor */
-    max-width: 300px; /* Ancho máximo para imágenes */
+    max-width: 250px; /* Cambiar a un ancho máximo más pequeño */
     height: auto; /* Altura automática para mejor ajuste */
     background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con opacidad */
     padding: 20px;
@@ -29,18 +29,19 @@
     margin: 0; /* Sin margen en la lista */
     display: flex; /* Usar flexbox en la lista */
     flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    justify-content: space-evenly;
 }
 
 .TablaProdc li {
-    flex: 0 0 calc(33.33% - 15px); /* Ancho de cada elemento (3 columnas) */
+    flex: 0 0 calc(30.00% - 15px); /* Ancho de cada elemento (3 columnas) */
     box-sizing: border-box; /* Incluye padding y bordes en el tamaño total */
-    margin-bottom: 15px; /* Espacio entre filas reducido */
-    background-color: rgba(255, 255, 255, 0.774); /* Fondo blanco */
+    margin-bottom: 15px; /* Espacio entre filas */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco */
     color: black;
     font-size: large;
     font-weight: bold;
     border-radius: 8px; /* Bordes redondeados */
-    padding: 10px; /* Padding interno */
+    padding: 10px; /* Ajusta el padding interno */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
     transition: transform 0.3s; /* Transición suave */
 }
