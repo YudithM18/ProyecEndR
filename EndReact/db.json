@@ -5,6 +5,12 @@
       "username": "Anthony Esquivel",
       "correo": "aesquivel91@gmail.com",
       "pass": "AnthEsq91"
+    },
+    {
+      "id": "eef3",
+      "username": "Paula Marin",
+      "correo": "pmarin@fwdcostarica.com",
+      "pass": "PauMar01"
     }
   ],
   "producto": [
@@ -64,6 +70,11 @@
       "id": "a532",
       "servicio": "Limpieza de Casa",
       "precioS": "$300"
+    },
+    {
+      "id": "84e0",
+      "servicio": "Limpieza De Bosques",
+      "precioS": "$1000"
     }
   ],
   "testimonios": [

@@ -1,6 +1,6 @@
 async function GetTestimonio() {
     try {
-        const response = await fetch('http://localhost:3001/testimonios/', {
+        const response = await fetch('http://localhost:3001/testimonios', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'

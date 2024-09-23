@@ -10,6 +10,9 @@ function FormHome() {
   useEffect(() => {
     const fetchTestimonio = async () => {
       const data = await GetTestimonio(); // Obtiene los datos de testimonios
+
+      
+      
       setTestiminios(data); // Actualiza el estado con los testimonios
     };
     fetchTestimonio(); // Llama a la función para obtener testimonios
