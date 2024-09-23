@@ -13,6 +13,7 @@ function Navbar() {
             <Link to="/Contacto" className='link'>Contacto <br /> Contacts</Link>
             <Link to="/Ubicacion" className='link'>Ubicación <br /> Location</Link>
             <Link to="/AsiSomos" className='link'>Así Somos <br /> About Us</Link>
+            <Link to="/TerminosYCondiciones" className='link'>Terminos Y<br />Condiciones</Link>
             {/* Enlaces protegidos que pueden requerir autenticación */}
             <Link to="/Administracion" className='linkProtegido'>Gerencia</Link>
             <Link to="/AdministracionUsers" className='linkProtegido'>Usuarios</Link>

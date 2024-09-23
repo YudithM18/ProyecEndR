@@ -1,4 +1,4 @@
-.servicio {
+.servicios {
     margin-left: 330px; /* Margen izquierdo para pantallas grandes */
     font-size: xxx-large; /* Tamaño de fuente para pantallas grandes */
 }
@@ -62,7 +62,7 @@
 
 /* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
-    .servicio {
+    .servicios {
         margin: 20px auto; /* Centra el texto del servicio */
         text-align: center; /* Centra el texto */
         font-size: x-large; /* Reduce el tamaño de fuente */
@@ -89,7 +89,7 @@
 }
 
 @media (max-width: 480px) {
-    .servicio {
+    .servicios {
         font-size: large; /* Reduce aún más el tamaño de fuente */
     }
 

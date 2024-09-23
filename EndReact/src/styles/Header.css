@@ -17,7 +17,7 @@
 
 .tituloH {
     margin-left: auto; /* Empuja el título a la derecha */
-    font-size: 35px; /* Tamaño de fuente */
+    font-size: 40px; /* Tamaño de fuente */
     color: #d5dbdd; /* Color del texto */
     display: flex; /* Flexbox para centrar verticalmente */
     align-items: center; /* Centra verticalmente */

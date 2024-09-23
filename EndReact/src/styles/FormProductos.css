@@ -7,6 +7,8 @@
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); /* Sombra más suave */
     border-radius: 12px; /* Bordes más redondeados */
     transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    display: block; /* Asegura que las imágenes se comporten como bloque */
+    margin: 0 auto; /* Centra horizontalmente */
 }
 
 .imagen:hover {
@@ -17,7 +19,7 @@
 .TablaProdc {
     display: flex; /* Usar flexbox para disposición en filas */
     flex-wrap: wrap; /* Permite que los elementos se envuelvan si es necesario */
-    justify-content: flex-start; /* Alinea los elementos al inicio */
+    justify-content: center; /* Centra los elementos horizontalmente */
     gap: 15px; /* Espacio entre elementos reducido */
     margin: 20px auto; /* Centra la tabla y ajusta márgenes */
     padding: 20px; /* Añade padding para mejor separación */
@@ -29,11 +31,11 @@
     margin: 0; /* Sin margen en la lista */
     display: flex; /* Usar flexbox en la lista */
     flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
-    justify-content: space-evenly;
+    justify-content: space-evenly;/* Crea un espacio entre los elementos de la lista*/
 }
 
 .TablaProdc li {
-    flex: 0 0 calc(30.00% - 15px); /* Ancho de cada elemento (3 columnas) */
+    flex: 0 0 calc(30% - 15px); /* Ancho de cada elemento (3 columnas) */
     box-sizing: border-box; /* Incluye padding y bordes en el tamaño total */
     margin-bottom: 15px; /* Espacio entre filas */
     background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco */
@@ -44,6 +46,7 @@
     padding: 10px; /* Ajusta el padding interno */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
     transition: transform 0.3s; /* Transición suave */
+    text-align: center; /* Centra el texto en cada ítem */
 }
 
 .TablaProdc li:hover {
@@ -68,7 +71,6 @@
 @media (max-width: 768px) {
     .TablaProdc li {
         flex: 0 0 calc(50% - 15px); /* 2 columnas en pantallas medianas */
-        margin-bottom: 15px; /* Ajusta el margen inferior */
     }
 
     .imagen {
@@ -93,7 +95,6 @@
 @media (max-width: 480px) {
     .TablaProdc li {
         flex: 0 0 100%; /* 1 columna en pantallas pequeñas */
-        margin-bottom: 15px; /* Ajusta el margen inferior */
     }
 
     .tituloProduct,
@@ -104,4 +105,85 @@
     .texto {
         font-size: 0.9rem; /* Ajusta el tamaño de fuente del texto */
     }
+
+    .contenedorUl {
+        flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .servicio {
+        width: 100%; /* 1 columna en pantallas pequeñas */
+        margin-bottom: 10px; /* Espacio entre los elementos */
+    }
 }
+
+
+
+
+
+.TablaServis {
+    padding: 0px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px; /* Ancho máximo */
+    margin: 20px auto; /* Centrado */
+}
+
+.contenedorUl {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+    display: flex; /* Usar flexbox para alinear horizontalmente */
+    justify-content: space-around; /* Espacio uniforme entre elementos */
+    flex-wrap: wrap; /* Permite que se envuelvan los elementos si es necesario */
+}
+
+.servicio {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+    border: 2px solid #e1e1e1; /* Borde suave */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px; /* Padding interno */
+    text-align: center; /* Centra el texto */
+    flex: 1; /* Permite que cada elemento crezca por igual */
+    min-width: 150px; /* Ancho mínimo para los elementos */
+    margin: 10px; /* Margen alrededor de cada servicio */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+.servicio:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al hacer hover */
+}
+
+.servicio-info h3 {
+    font-size: 1.5rem; /* Tamaño del nombre del servicio */
+    color: #007BFF; /* Color llamativo para el nombre */
+    margin: 0; /* Sin margen */
+}
+
+.servicio-info p {
+    font-size: 1.2rem; /* Tamaño del precio */
+    color: #666; /* Color más suave para el precio */
+    margin: 5px 0 0; /* Margen superior para el precio */
+}
+
+/* Media Queries para mejor adaptabilidad */
+@media (max-width: 768px) {
+    .servicio {
+        flex: 1; /* Se mantiene en una sola fila */
+    }
+}
+@media (max-width: 480px) {
+    .contenedorUl {
+        flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .servicio {
+        width: 100%; /* 1 columna en pantallas pequeñas */
+        max-width: 100%; /* Asegura que no sobresalga el contenedor */
+        margin: 5px 0; /* Espacio entre los elementos */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    }
+}
+

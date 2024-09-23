@@ -1,6 +1,6 @@
 .navegar {
     display: grid;
-    grid-template-columns: repeat(8, 150px); /* Estructura de columnas */
+    grid-template-columns: repeat(9, 145px); /* Estructura de columnas */
     background-color: #1F3D47; /* Color de fondo principal */
     position: relative; /* Posición relativa */
     margin: 10px; /* Espaciado externo */

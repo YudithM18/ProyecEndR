@@ -17,7 +17,7 @@
     position: relative; /* Posición relativa */
     top: 25px; /* Desplazamiento hacia abajo */
     right: 6px; /* Desplazamiento hacia la derecha */
-    inline-size: 1353px; /* Ancho máximo */
+    inline-size: 1307px; /* Ancho máximo */
     justify-content: end; /* Alineación de contenido */
     font-size: x-large; /* Tamaño de fuente para el contenedor */
     padding: 20px; /* Padding para mayor comodidad */

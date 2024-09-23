@@ -11,6 +11,7 @@ import Productos from '../pages/Productos'
 import Servicios from '../pages/Servicios'
 import Ubicacion from '../pages/Ubicacion'
 import AdministracionUsers from '../pages/AdministracionUsers';
+import TerminosYCondiciones from '../pages/TerminosYCondiciones';
 
 const Routing = () => {
     return (
@@ -23,6 +24,7 @@ const Routing = () => {
             <Route path='/AsiSomos' element={<AsiSomos />} />
             <Route path='/Ubicacion' element={<Ubicacion />} />
             <Route path='/Login' element={<Login />} />
+            <Route path='/TerminosYCondiciones' element={<TerminosYCondiciones />} />
             <Route path='/Administracion' element={<ProtectedRoute><Administracion /></ProtectedRoute>} />
             <Route path='/AdministracionUsers' element={<ProtectedRoute><AdministracionUsers /></ProtectedRoute>} />
          </Routes>

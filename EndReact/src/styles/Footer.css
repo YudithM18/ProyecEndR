@@ -3,7 +3,7 @@
     position: relative;
     top: 10px;
     right: 6px;
-    inline-size: 1353px; /* Ancho para pantallas grandes */
+    inline-size: 1307px; /* Ancho para pantallas grandes */
     justify-content: end;
     padding: 20px; /* Añade padding para mejorar la apariencia */
 }

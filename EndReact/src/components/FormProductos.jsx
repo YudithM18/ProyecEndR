@@ -44,16 +44,19 @@ function FormProductos() {
       </div>
 
       <h1 className='tituloServs'>Servicios Disponibles</h1>
-      <div>
-        <ul>
-          {/* Mapea los servicios y los muestra en una lista */}
-          {datoServicios.map((servicio) => (
-            <li className='texto' key={servicio.id}>
-              {servicio.servicio} <br /> {servicio.precioS} {/* Muestra el nombre del servicio y su precio */}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <div className='TablaServis'>
+    <ul className='contenedorUl' >
+      {datoServicios.map((servicio) => (
+        <li className='servicio' key={servicio.id}>
+          <div className='servicio-info'>
+            <h3>{servicio.servicio}</h3>
+            <p>{servicio.precioS}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+</div>
+
     </div>
   );
 }

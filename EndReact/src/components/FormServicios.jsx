@@ -20,7 +20,7 @@ function FormServicios() {
   return (
     <div>
       <br />
-      <h1 className='servicio'>Mantenimiento de Canoas</h1>
+      <h1 className='servicios'>Mantenimiento de Canoas</h1>
       <br />
       <div className='contenedorCanoas'>
         {/* Muestra imágenes del mantenimiento de canoas */}
@@ -30,7 +30,7 @@ function FormServicios() {
       </div>
 
       <br />
-      <h1 className='servicio'>Mantenimiento de Piscinas</h1>
+      <h1 className='servicios'>Mantenimiento de Piscinas</h1>
       <br />
       <div className='contenedorPiscina'>
         {/* Muestra imágenes del mantenimiento de piscinas */}
@@ -39,7 +39,7 @@ function FormServicios() {
       </div>
 
       <br />
-      <h1 className='servicio'>Mantenimiento de Jardines</h1>
+      <h1 className='servicios'>Mantenimiento de Jardines</h1>
       <br />
       <div className='contenedorJardin'>
         {/* Muestra imágenes del mantenimiento de jardines */}
